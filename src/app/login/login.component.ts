@@ -13,7 +13,7 @@ export class LoginComponent {
   ) { }
 
   login() {
-    this.router.navigate(['homepage']);
+    this.router.navigate(['homePage']);
   }
 
 }
