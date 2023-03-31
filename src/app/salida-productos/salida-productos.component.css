@@ -1,0 +1,289 @@
+#Logo{
+width: 200px;
+height: 79.1px;
+padding-left: 153px;
+padding-top: 10px;
+}
+
+#barraFondo{
+width: 100%;
+height: 224px;
+background: #F29406;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#userLogo{
+    position: absolute;
+    filter: invert(100%);
+    right: 250px;
+    top: 20px
+}
+#downLogo{
+    position: absolute;
+    filter: invert(100%);
+    right: 10px;
+    top: 25px
+}
+#idUser{
+    position:absolute;
+    top: 10px;
+    right: 90px;
+    color: white;
+}
+
+#idInputSearch{
+    box-sizing: border-box;
+padding-left: 20px;
+padding-right: 45px;
+font-family: 'Arial';
+font-size: 16px;
+position: absolute;
+width: 353px;
+height: 39px;
+left: 793px;
+top: 36px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 30px;
+background: url(../../assets/busca-48.png) no-repeat 310px 5px;
+background-size: 30px;
+
+background-color:#FCFCFC ;
+
+}
+
+#barraLateral{
+position: absolute;
+width: 121px;
+height: 100%;
+left: 0px;
+top: 0px;
+
+background: #FCFCFC;
+}
+
+.btnOpcs{
+    display: inline-block;
+padding: 5px 20px;
+width: 121px;
+height: 82px;
+background: rgba(242, 148, 6, 0.1);
+border: none;
+text-decoration: none;
+    font-size:0;
+
+}
+
+.btnOpcs p{
+    font-size:12px;
+    font-family: 'Arial';
+    
+}
+
+#idActivo{
+position: absolute;
+width: 6px;
+height: 82px;
+left: 0px;
+top: 382px;
+background: #F29406;
+}
+
+#btnHome{
+position: absolute;
+left: 0px;
+top: 136px;
+background: #FCFCFC;
+}
+#btnAlmacen{
+position: absolute;
+left: 0px;
+top: 218px;
+background: #FCFCFC;
+
+}
+
+#btnEntrada{
+    position: absolute;
+left: 0px;
+top: 300px;
+background: #FCFCFC;
+
+}
+
+#btnSalida{
+    position: absolute;
+left: 0px;
+top: 382px;
+}
+
+#btnContri{
+    position: absolute;
+left: 0px;
+top: 464px;
+background: #FCFCFC;
+}
+
+#btnAdmin{
+position: absolute;
+left: 0px;
+top: 546px;
+background: #FCFCFC;
+}
+
+#btnReportes{
+    position: absolute;
+left: 0px;
+top: 628px;
+background: #FCFCFC;
+}
+
+#btnLogOut{
+position: absolute;
+left: 0px;
+top: 880px;
+background: #FCFCFC;
+
+}
+
+
+.logos{
+    width:35px;
+    height:35px;
+}
+
+
+
+#contenedor{
+    position: absolute;
+height: 800px;
+left: 157px;
+right: 26px;
+top: 111px;
+background: #FCFCFC;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+#idH1Princ{
+position: absolute;
+width: 500px;
+height: 48px;
+left: 45px;
+font-family: 'Arial';
+font-style: italic;
+font-weight: 200;
+font-size: 48px;
+line-height: 48px;
+
+color: #727171;
+font-variation-settings: 'slnt' 0;
+
+}
+#btnNuevo{
+    position: absolute;
+width: 141.25px;
+height: 41px;
+left: 1550px;
+top: 32px;
+
+background: #F29406;
+backdrop-filter: blur(2px);
+border: none;
+border-radius: 20px;
+display:flex
+}
+#btnNuevo p{
+color: white;
+font-size:18px;
+position: absolute;
+left: 50px;
+top: -7px;
+font-family: 'Arial';
+font-style: normal;
+font-weight: 900;
+line-height: 19px;
+}
+#logoMas{
+    padding-top:3px;
+    filter: invert(100%);
+
+}
+
+#idContent{
+    left: 45px;
+top: 100px;
+position: absolute;
+text-align: center;
+    font-family: 'Arial';
+    width: 95%;
+    border-spacing: 0px;
+    font-size: 24px;
+        border: 2px solid #dddddd;
+border-radius: 5px 5px 5px 5px;
+
+}
+
+th,td{
+        border: 2px solid #dddddd;
+  padding: 8px;
+
+}
+
+
+#idRow{
+    width: 10%;
+}
+
+
+
+tr:nth-child(even) {
+  background: #F5F1E7;
+}
+
+.paginacion{
+    position: absolute;
+left: 1550px;
+top: 739px;
+    display: inline-block;
+}
+
+.paginacion a {
+    color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.paginacion a.active {
+
+ background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.paginacion a:hover:not(.active) {background-color: #ddd;}
+
+
+#idPageNumber{
+    width: 10px;
+    height: 21px;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #F29406;
+  border: 1px solid #ddd;
+  color: white;
+  text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
