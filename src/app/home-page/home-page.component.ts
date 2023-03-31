@@ -7,4 +7,31 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+
+
+
+  goToAlmacen() {
+    console.log("Voy pa almacen");
+  }
+
+  goToEntradaP() {
+    console.log("Voy pa entrada de productos");
+  }
+
+  goToSalidP() {
+    console.log("Voy pa salida de productos");
+  }
+
+  goToContribuyentes() {
+    console.log("Voy pa Contribuyentes");
+  }
+  goToAdmin() {
+    console.log("Voy pa Administracion");
+  }
+
+  goToReportes() {
+    console.log("Voy pa reportes");
+  }
 }
+
+
