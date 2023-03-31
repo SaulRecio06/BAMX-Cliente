@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-entrada-productos',
+  templateUrl: './entrada-productos.component.html',
+  styleUrls: ['./entrada-productos.component.css']
 })
-export class HomePageComponent {
+export class EntradaProductosComponent {
   constructor(
     private router: Router,
   ) { }
@@ -52,5 +52,3 @@ export class HomePageComponent {
     this.router.navigate(['login']);
   }
 }
-
-

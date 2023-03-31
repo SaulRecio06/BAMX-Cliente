@@ -84,6 +84,7 @@ color: #FCFCFC;
 background: #F29406;
 border-radius: 30px;
 font-family: Arial;
+border: none;
 
 }
 #idInputs{
@@ -92,6 +93,7 @@ font-family: Arial;
 #idButton{
     padding: 100px;
     padding-left: 120px;
+
 }
 #loginRight{
 position: absolute;
