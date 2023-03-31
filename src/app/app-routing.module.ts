@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: 'contribuyentes', component: ContribuyentesComponent },
   { path: 'admin', component: AdministracionComponent },
   { path: 'reportes', component: ReportesComponent },
+  { path: 'login', component: LoginComponent },
+
 
 
 
