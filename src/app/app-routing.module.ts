@@ -10,7 +10,7 @@ import { AdministracionComponent } from './administracion/administracion.compone
 import { ReportesComponent } from './reportes/reportes.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'homePage', component: HomePageComponent },
   { path: 'almacen', component: AlmacenComponent },
   { path: 'entrada', component: EntradaProductosComponent },
