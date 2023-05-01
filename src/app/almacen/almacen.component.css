@@ -285,3 +285,179 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+@media (max-width:1366px) {
+    #idInputSearch {
+        left: 523px;
+        top: 46px;
+    }
+
+    #userLogo {
+        top: 40px
+    }
+
+    #idUser {
+        top: 25px;
+    }
+
+    #downLogo {
+        top: 40px;
+    }
+
+    #contenedor {
+        height: 600px;
+    }
+
+    #idH1Princ {
+        font-size: 36px;
+    }
+
+    #btnNuevo {
+        left: 950px;
+        top: 32px;
+    }
+
+    th,
+    td {
+
+        padding: 0px;
+
+    }
+    .paginacion{
+        left: 950px;
+        top: 539px;
+    }
+    
+    .logos{
+        width: 30px;
+        height: 30px;
+    }
+
+
+}
+@media (max-width:1036px) {
+    #idInputSearch {
+        left: 368px;
+        top: 46px;
+        width: 340px;
+    }
+
+    #userLogo {
+        top: 45px;
+        width: 35px;
+        right: 155px;
+    }
+
+    #idUser {
+        top: 35px;
+        font-size: 24px;
+        right: 48px;
+    }
+
+    #downLogo {
+        top: 45px;
+        width: 35px;
+    }
+
+    #contenedor {
+        height: 600px;
+    }
+
+    #idH1Princ {
+        font-size: 36px;
+    }
+
+    #btnNuevo {
+        left: 650px;
+        top: 32px;
+    }
+
+    th,
+    td {
+
+        padding: 0px;
+
+    }
+    .paginacion{
+        left: 650px;
+        top: 539px;
+    }
+    
+    .logos{
+        width: 30px;
+        height: 30px;
+    }
+    #idContent{
+        width: 750px;
+    }
+
+
+}
+@media (max-width:681px){
+    #Logo{
+        width: 120px;
+        height: 50px;
+        padding-top: 20px;
+    }
+    #idInputSearch {
+        left: 343px;
+        top: 40px;
+        width: 110px;
+        height: 30px;
+    }
+
+    #userLogo {
+        top: 38px;
+        width: 30px;
+        height: 30px;
+        right: 110px;
+    }
+
+    #idUser {
+        top: 35px;
+        font-size: 16px;
+        right: 40px;
+    }
+
+    #downLogo {
+        top: 38px;
+        width: 30px;
+        height: 30px;
+        right: 10px;
+    }
+
+    #contenedor {
+        height: 600px;
+    }
+
+    #idH1Princ {
+        font-size: 28px;
+    }
+
+    #btnNuevo {
+        left: 310px;
+        top: 32px;
+    }
+
+    th,
+    td {
+
+        padding: 0px;
+
+    }
+    #idContent{
+        width: 380px;
+    }
+    .paginacion{
+        left: 320px;
+        top: 539px;
+    }
+    
+    .logos{
+        width: 20px;
+        height: 20px;
+    }
+    .btnOpcs p{
+        font-size: 12px;
+    }
+}
