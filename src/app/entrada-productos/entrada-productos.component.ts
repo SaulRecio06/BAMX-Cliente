@@ -1,15 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductosRestService } from '../services/productos-rest.service';
 
 @Component({
   selector: 'app-entrada-productos',
   templateUrl: './entrada-productos.component.html',
   styleUrls: ['./entrada-productos.component.css']
 })
-export class EntradaProductosComponent {
+export class EntradaProductosComponent implements OnInit {
   constructor(
-    private router: Router,
+    private router: Router, private ProductService: ProductosRestService
   ) { }
+  ProductList: any = [];
+  public getJsonValue: any;
+  ngOnInit(): void {
+    this.ProductosGet();
+  }
+
+
+  public ProductosGet() {
+    this.ProductService.get().subscribe((_Response: any) => {
+      this.ProductList = _Response;
+      console.log(this.ProductList);
+    })
+  }
+
+
+  ////////////////////////////////////
   goToHome() {
     console.log("Voy pa home");
     this.router.navigate(['homePage']);

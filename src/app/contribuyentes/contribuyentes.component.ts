@@ -1,15 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContribuyentesRestService } from '../services/contribuyentes-rest.service';
 
 @Component({
   selector: 'app-contribuyentes',
   templateUrl: './contribuyentes.component.html',
   styleUrls: ['./contribuyentes.component.css']
 })
-export class ContribuyentesComponent {
+export class ContribuyentesComponent implements OnInit {
   constructor(
-    private router: Router,
+    private router: Router, private ContribuyentesService: ContribuyentesRestService
   ) { }
+  ContribuyentesList: any = [];
+  public getJsonValue: any;
+  ngOnInit(): void {
+    this.ContribuyentesGet();
+  }
+
+
+  public ContribuyentesGet() {
+    this.ContribuyentesService.get().subscribe((_Response: any) => {
+      this.ContribuyentesList = _Response;
+      console.log(this.ContribuyentesList);
+    })
+  }
+
+
   goToHome() {
     console.log("Voy pa home");
     this.router.navigate(['homePage']);

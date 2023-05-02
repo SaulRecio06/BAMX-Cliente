@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { EmpleadoRestService } from '../services/empleado-rest.service';
 
 @Component({
   selector: 'app-administracion',
@@ -8,8 +9,24 @@ import { Router } from '@angular/router';
 })
 export class AdministracionComponent {
   constructor(
-    private router: Router,
+    private router: Router, private EmpleadoService: EmpleadoRestService
   ) { }
+  EmpleadoList: any = [];
+  public getJsonValue: any;
+  ngOnInit(): void {
+    this.EmpleadoGet();
+  }
+
+
+  public EmpleadoGet() {
+    this.EmpleadoService.get().subscribe((_Response: any) => {
+      this.EmpleadoList = _Response;
+      console.log(this.EmpleadoList);
+    })
+  }
+
+
+
   goToHome() {
     console.log("Voy pa home");
     this.router.navigate(['homePage']);

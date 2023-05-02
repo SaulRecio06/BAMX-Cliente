@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -11,6 +10,7 @@ import { SalidaProductosComponent } from './salida-productos/salida-productos.co
 import { ContribuyentesComponent } from './contribuyentes/contribuyentes.component';
 import { AdministracionComponent } from './administracion/administracion.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { ReportesComponent } from './reportes/reportes.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
