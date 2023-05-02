@@ -52,55 +52,22 @@
     <table id="idContent">
         <tr>
             <th id="idRow">Id</th>
+            <th>Dado de Alta</th>
             <th>Descripcion</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Rfc</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
+        <tr *ngFor="let dataItem of ContribuyentesList">
+            <td>{{dataItem.id}}</td>
+            <td>{{dataItem.created}}</td>
+            <td>{{dataItem.descripcion}}</td>
+            <td>{{dataItem.telefono}}</td>
+            <td>{{dataItem.direccion}}</td>
+            <td>{{dataItem.rfc}}</td>
+
+
+
         </tr>
     </table>
     <div class="paginacion">

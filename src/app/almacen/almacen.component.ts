@@ -1,15 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlmacenRestService } from '../services/almacen-rest.service';
 
 @Component({
   selector: 'app-almacen',
   templateUrl: './almacen.component.html',
   styleUrls: ['./almacen.component.css']
 })
-export class AlmacenComponent {
+export class AlmacenComponent implements OnInit {
   constructor(
-    private router: Router,
+    private router: Router, private AlmacenService: AlmacenRestService
   ) { }
+  AlmacenList: any = [];
+  public getJsonValue: any;
+  ngOnInit(): void {
+    this.AlmacenGet();
+  }
+
+
+  public AlmacenGet() {
+    this.AlmacenService.get().subscribe((_Response: any) => {
+      this.AlmacenList = _Response;
+      console.log(this.AlmacenList);
+    })
+  }
+
+
+
+
+
+
   goToHome() {
     console.log("Voy pa home");
     this.router.navigate(['homePage']);

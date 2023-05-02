@@ -53,54 +53,19 @@
         <tr>
             <th id="idRow">Id</th>
             <th>Descripcion</th>
+            <th>Codigo Sat</th>
+            <th>Dado de Alta</th>
+
+
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
+        <tr *ngFor="let dataItem of ProductList">
+            <td>{{dataItem.id}}</td>
+            <td>{{dataItem.descripcion}}</td>
+            <td>{{dataItem.codigo_sat}}</td>
+            <td>{{dataItem.created}}</td>
+
+
+
         </tr>
     </table>
     <div class="paginacion">
