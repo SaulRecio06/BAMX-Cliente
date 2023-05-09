@@ -52,55 +52,23 @@
     <table id="idContent">
         <tr>
             <th id="idRow">Id</th>
-            <th>Descripcion</th>
+            <th>Dado de alta</th>
+            <th>Nombre</th>
+            <th>Rol</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
+        <tr *ngFor="let dataItem of EmpleadoList">
+            <td>{{dataItem.id}}</td>
+            <td>{{dataItem.created}}</td>
+            <td>{{dataItem.nombre}}</td>
+            <td>{{dataItem.rolId.descripcion}}</td>
+
+
+
+
+
+
+
+
         </tr>
     </table>
     <div class="paginacion">

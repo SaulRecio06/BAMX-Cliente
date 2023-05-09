@@ -11,12 +11,10 @@
         <p>Pagina Principal</p>
     </button>
     <div id="idActivo"></div>
-
     <button id="btnAlmacen" class="btnOpcs" (click)="goToAlmacen()">
         <img class="logos" src="../../assets/icons8-tienda-departamento-96.png">
         <p>Almacén</p>
     </button>
-
     <button id="btnEntrada" class="btnOpcs" (click)="goToEntrada()">
         <img class="logos" src="../../assets/icons8-camión-96.png">
         <p>Entrada de Productos</p>
@@ -45,63 +43,32 @@
 <div id="contenedor">
     <h1 id="idH1Princ">Almacén</h1>
 
-    <button id="btnNuevo">
+    <button (click)="openDialog()" id="btnNuevo">
 
         <img id="logoMas" src="../../assets/más-32.png">
         <p>Nuevo</p>
+
     </button>
     <table id="idContent">
         <tr>
             <th id="idRow">Id</th>
-            <th>Descripcion</th>
+            <th>Folio</th>
+            <th>Kilogramos</th>
+            <th>Importe</th>
+            <th>Fecha de Entrada</th>
+            <th>Recibio</th>
+            <th>Clave de producto</th>
+            <th>Contribuyente</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Ya Mero Ya Mero</td>
+        <tr *ngFor="let dataItem of AlmacenList">
+            <td>{{dataItem.id}}</td>
+            <td>{{dataItem.folio}}</td>
+            <td>{{dataItem.kilogramos}}</td>
+            <td>{{dataItem.importe}}</td>
+            <td>{{dataItem.fecha_entrada}}</td>
+            <td>{{dataItem.recibio.nombre}}</td>
+            <td>{{dataItem.clave_producto.codigo_sat}}</td>
+            <td>{{dataItem.contribuyente.descripcion}}</td>
         </tr>
     </table>
     <div class="paginacion">
