@@ -11,7 +11,10 @@ import { ContribuyentesComponent } from './contribuyentes/contribuyentes.compone
 import { AdministracionComponent } from './administracion/administracion.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { HttpClientModule } from '@angular/common/http'
-
+import { ModalComponent } from './modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +25,16 @@ import { HttpClientModule } from '@angular/common/http'
     SalidaProductosComponent,
     ContribuyentesComponent,
     AdministracionComponent,
-    ReportesComponent
+    ReportesComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
