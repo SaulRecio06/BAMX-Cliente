@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BAMX-Cliente';
+
+  title = 'BAMX_CLIENTE';
+
 
 
 

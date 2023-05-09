@@ -1,0 +1,50 @@
+<app-barra-inicio [OptionSala]="'Almacen'"></app-barra-inicio>
+
+<div class="Content-Table">
+    <div class="Header-Table">
+        <div class="Title">
+            <h2>Almacen</h2>
+        </div>
+        <div class="btn-New">
+            <button>
+                <img src="assets/más-32.png" alt="">
+                <p>Nuevo</p>
+            </button>
+        </div>
+    </div>
+    <div class="Table-Body">
+        <table>
+            <tr>
+                <th>Clave</th>
+                <th>Folio</th>
+                <th>Pieza</th>
+                <th>importe</th>
+                <th>Fecha de Entrega</th>
+                <th>Recibo</th>
+                <th>Contribuyente</th>
+                <th>Opciones</th>
+            </tr>
+            <tr *ngFor="let element of Obj">
+                <td>{{element.Clave}}</td>
+                <td>132456789</td>
+                <td>4</td>
+                <td>1200</td>
+                <td>14/04/1844</td>
+                <td>Pagado</td>
+                <td>Lauren</td>
+                <td class="Opcion">
+                    <img src="assets/editar-32.png" alt="">
+                    <img src="assets/basura-48.png" alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="Content-Pagination">
+        <div class="Pagination">
+            <button><</button>
+            <p>1</p>
+            <button>></button>
+        </div>
+    </div>
+</div>

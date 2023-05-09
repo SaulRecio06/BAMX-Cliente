@@ -1,0 +1,41 @@
+<app-barra-inicio [OptionSala]="'Reporte'"></app-barra-inicio>
+
+<div class="Content-Table">
+    <div class="Header-Table">
+        <div class="Title">
+            <h2>Reportes</h2>
+        </div>
+        <div class="btn-New">
+            <button>
+                <img src="assets/más-32.png" alt="">
+                <p>Nuevo</p>
+            </button>
+        </div>
+    </div>
+    <div class="Table-Body">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Rol</th>
+                
+                <th>Opciones</th>
+            </tr>
+            <tr *ngFor="let element of Obj">
+                <td>{{ element.Nombre }}</td>
+                <td>{{ element.Rol }}</td>
+                <td class="Opcion">
+                    <img src="assets/editar-32.png" alt="">
+                    <img src="assets/basura-48.png" alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="Content-Pagination">
+        <div class="Pagination">
+            <button><</button>
+            <p>1</p>
+            <button>></button>
+        </div>
+    </div>
+</div>

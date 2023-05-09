@@ -1,0 +1,84 @@
+.Header{
+    margin: 20px;
+}
+.Card-Login {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card-Login .Card-Form{
+    background-color: white;
+    width: 320px;
+    height: 380px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.Card-Login .Card-Info{
+    background-color: rgba(242, 148, 6, 0.5);
+    width: 320px;
+    height: 380px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Title{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/*Box-Form*/
+.Card-Form .Box-Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Card-Form .Box-Form form{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Card-Form .Box-Form form p{
+    width: 68%;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Card-Form .Box-Form form .casillas{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 68%;
+}
+
+.Card-Form .Box-Form form button{
+    margin-top: 80px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    background-color: orange;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Card-Info*/
+
+.Card-Login .Card-Info .Datos{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 0 10px;
+}
