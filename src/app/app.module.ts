@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     ContribuyenteTablaComponent,
     AdminTablaComponent,
     ReportesTablaComponent,
-    LoginBaseComponent
+    LoginBaseComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
