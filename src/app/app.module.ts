@@ -18,6 +18,7 @@ import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { EditAlmacenComponent } from './component/edit-almacen/edit-almacen.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     AdminTablaComponent,
     ReportesTablaComponent,
     LoginBaseComponent,
-    ModalComponent
+    ModalComponent,
+    EditAlmacenComponent
   ],
   imports: [
     BrowserModule,

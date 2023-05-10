@@ -6,7 +6,7 @@
             <h2>Almacen</h2>
         </div>
         <div class="btn-New">
-            <button>
+            <button (click)="openDialog()" id="btnNuevo">
                 <img src="assets/más-32.png" alt="">
                 <p>Nuevo</p>
             </button>
@@ -15,36 +15,43 @@
     <div class="Table-Body">
         <table>
             <tr>
-                <th>Clave</th>
+                <th>Id</th>
                 <th>Folio</th>
-                <th>Pieza</th>
-                <th>importe</th>
-                <th>Fecha de Entrega</th>
-                <th>Recibo</th>
+                <th>Kilogramos</th>
+                <th>Importe</th>
+                <th>Fecha de Entrada</th>
+                <th>Recibio</th>
+                <th>Clave de producto</th>
                 <th>Contribuyente</th>
-                <th>Opciones</th>
+                <th>Accion</th>
+
             </tr>
-            <tr *ngFor="let element of Obj">
-                <td>{{element.Clave}}</td>
-                <td>132456789</td>
-                <td>4</td>
-                <td>1200</td>
-                <td>14/04/1844</td>
-                <td>Pagado</td>
-                <td>Lauren</td>
-                <td class="Opcion">
-                    <img src="assets/editar-32.png" alt="">
-                    <img src="assets/basura-48.png" alt="">
+            <tr *ngFor="let dataItem of AlmacenList">
+                <td>{{dataItem.id}}</td>
+                <td>{{dataItem.folio}}</td>
+                <td>{{dataItem.kilogramos}}</td>
+                <td>{{dataItem.importe}}</td>
+                <td>{{dataItem.fecha_entrada}}</td>
+                <td>{{dataItem.recibio.nombre}}</td>
+                <td>{{dataItem.clave_producto.codigo_sat}}</td>
+                <td>{{dataItem.contribuyente.descripcion}}</td>
+                <td>
+                    <button style="background-color: transparent;border: none;" (click)="openEditDialog(dataItem)"><img
+                            src="assets/editar-32.png" alt=""></button>
+                    <button style="background-color: transparent;border: none;"><img src="assets/basura-48.png"
+                            alt=""></button>
+
                 </td>
             </tr>
         </table>
     </div>
-    
+
     <div class="Content-Pagination">
         <div class="Pagination">
-            <button><</button>
-            <p>1</p>
-            <button>></button>
+            <button>
+                < </button>
+                    <p>1</p>
+                    <button>></button>
         </div>
     </div>
 </div>

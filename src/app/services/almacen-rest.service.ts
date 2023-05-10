@@ -14,6 +14,10 @@ export class AlmacenRestService {
     return this.http.get<any>(this.ApiUrl);
   }
 
+  public getAlmacenId(id: any): any {
+    return this.http.get<any>(this.ApiUrl + '/' + id);
+  }
+
 
   public postAlmacen(data: any): any {
     return this.http.post<any>(this.ApiUrl, data);
