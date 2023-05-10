@@ -10,7 +10,23 @@ export class AlmacenRestService {
   readonly ApiUrl = "http://localhost:3000/almacen";
 
 
-  public get(): any {
+  public getAlmacen(): any {
     return this.http.get<any>(this.ApiUrl);
   }
+
+  public getAlmacenId(id: any): any {
+    return this.http.get<any>(this.ApiUrl + '/' + id);
+  }
+
+
+  public postAlmacen(data: any): any {
+    return this.http.post<any>(this.ApiUrl, data);
+  }
+
+  public putAlmacen(data: any, id: string): any {
+    this.http.put(this.ApiUrl + '/' + id, data);
+  }
+
+
+
 }

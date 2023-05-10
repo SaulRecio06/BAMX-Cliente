@@ -1,30 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { LoginComponent } from './login/login.component';
-import { AlmacenComponent } from './almacen/almacen.component';
-import { EntradaProductosComponent } from './entrada-productos/entrada-productos.component';
-import { SalidaProductosComponent } from './salida-productos/salida-productos.component';
-import { ContribuyentesComponent } from './contribuyentes/contribuyentes.component';
-import { AdministracionComponent } from './administracion/administracion.component';
-import { ReportesComponent } from './reportes/reportes.component';
+import { AlmacenTablaComponent } from './component/almacen-tabla/almacen-tabla.component';
+import { MenuInicioComponent } from './component/menu-inicio/menu-inicio.component';
+import { EntradaTablaComponent } from './component/entrada-tabla/entrada-tabla.component';
+import { SalidaTablaComponent } from './component/salida-tabla/salida-tabla.component';
+import { ContribuyenteTablaComponent } from './component/contribuyente-tabla/contribuyente-tabla.component';
+import { AdminTablaComponent } from './component/admin-tabla/admin-tabla.component';
+import { ReportesTablaComponent } from './component/reportes-tabla/reportes-tabla.component';
+import { LoginBaseComponent } from './component/login-base/login-base.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'homePage', component: HomePageComponent },
-  { path: 'almacen', component: AlmacenComponent },
-  { path: 'entrada', component: EntradaProductosComponent },
-  { path: 'salida', component: SalidaProductosComponent },
-  { path: 'contribuyentes', component: ContribuyentesComponent },
-  { path: 'admin', component: AdministracionComponent },
-  { path: 'reportes', component: ReportesComponent },
-  { path: 'login', component: LoginComponent },
-
-
-
-
-
-
+  {path:"",redirectTo:"/Home",pathMatch:"full"},
+  {path:"Login",component:LoginBaseComponent},
+  {path:"Home",component:MenuInicioComponent},
+  {path:"almacen",component:AlmacenTablaComponent},
+  {path:"Entrada-Productos",component:EntradaTablaComponent},
+  {path:"Salida-Producto",component:SalidaTablaComponent},
+  {path:"Contribuyentes",component:ContribuyenteTablaComponent},
+  {path:"Admin",component:AdminTablaComponent},
+  {path:"Reporte",component:ReportesTablaComponent}
 ];
 
 @NgModule({
