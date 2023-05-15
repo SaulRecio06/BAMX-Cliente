@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlmacenRestService } from '../services/almacen-rest.service';
+
 import { ModalComponent } from '../modal/modal.component';
 import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-almacen',
@@ -13,14 +15,17 @@ export class AlmacenComponent implements OnInit {
 
 
 
+
   constructor(
     private router: Router, private dialogRef: MatDialog, private AlmacenService: AlmacenRestService
+
   ) { }
   AlmacenList: any = [];
   public getJsonValue: any;
   ngOnInit(): void {
     this.AlmacenGet();
   }
+
 
   openDialog() {
     this.dialogRef.open(ModalComponent, { width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m' })
@@ -29,6 +34,7 @@ export class AlmacenComponent implements OnInit {
 
   public AlmacenGet() {
     this.AlmacenService.getAlmacen().subscribe((_Response: any) => {
+
       this.AlmacenList = _Response;
       console.log(this.AlmacenList);
     })

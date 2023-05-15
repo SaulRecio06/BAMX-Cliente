@@ -8,6 +8,7 @@ export class EmpleadoRestService {
   readonly ApiUrl = "http://localhost:3000/empleado";
 
   constructor(private http: HttpClient) { }
+
   public getEmpleado(): any {
     return this.http.get<any>(this.ApiUrl);
   }
@@ -29,4 +30,5 @@ export class EmpleadoRestService {
     console.log(this.ApiUrl + '/' + id);
     return this.http.delete(this.ApiUrl + '/' + id);
   }
+
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BarraInicioComponent } from './component/barra-inicio/barra-inicio.component';
 import { MenuInicioComponent } from './component/menu-inicio/menu-inicio.component';
 import { BarMenuComponent } from './component/bar-menu/bar-menu.component';
@@ -34,6 +35,7 @@ import { EditEntradaProductosComponent } from './component/EntradaProductos-Comp
 import { DeleteEntradaProductosComponent } from './component/EntradaProductos-Component/delete-entrada-productos/delete-entrada-productos.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +65,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   imports: [
     BrowserModule,
     HttpClientModule,
+
     AppRoutingModule,
     MatDialogModule,
     MatButtonModule,
@@ -71,6 +74,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     BrowserAnimationsModule,
     FormsModule, MatPaginatorModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

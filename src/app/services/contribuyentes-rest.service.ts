@@ -8,6 +8,7 @@ export class ContribuyentesRestService {
   readonly ApiUrl = "http://localhost:3000/contribuyentes";
 
   constructor(private http: HttpClient) { }
+
   public getContribuyentes(): any {
     return this.http.get<any>(this.ApiUrl);
   }
@@ -33,6 +34,7 @@ export class ContribuyentesRestService {
     console.log(this.ApiUrl + '/' + id);
     return this.http.delete(this.ApiUrl + '/' + id);
   }
+
 
 
 
