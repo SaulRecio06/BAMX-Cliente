@@ -1,0 +1,107 @@
+
+.Content-Menu{
+    position: absolute;
+    top: 90px;
+    margin: 0 20px;
+    width: 97%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.Content-Menu h1{
+    margin: 20px;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #727171;
+    font-variation-settings: 'slnt' 0;
+}
+.Content-Menu hr{
+    margin: 20px;
+}
+.Content-Menu .Menu-Actions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+.Content-Menu .Menu-Actions button{
+    margin: 0 60px;
+    background: #F5F1E7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Arial';
+    font-size: 25px;
+}
+
+
+@media (min-width:700px){
+    .Content-Menu .Menu-Actions{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Content-Menu h1{
+        font-size: 32px;
+    }
+
+}
+
+@media (min-width:1020px) {
+    .Content-Menu{
+        position: absolute;
+        top: 90px;
+        margin: 0 20px;
+        width: 97%;
+        height: 80vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+    .Content-Menu h1{
+        margin: 20px;
+        font-family: 'Arial';
+        font-style: italic;
+        font-weight: 200;
+        font-size: 40px;
+        line-height: 48px;
+    
+        color: #727171;
+        font-variation-settings: 'slnt' 0;
+    }
+    .Content-Menu hr{
+        margin: 20px;
+    }
+    .Content-Menu .Menu-Actions{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+    .Content-Menu .Menu-Actions button{
+        margin: 0 60px;
+        background: #F5F1E7;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-family: 'Arial';
+        font-size: 25px;
+    }
+}
+
+@media (max-width:700px){
+    .Content-Menu{
+        top: 390px;
+        margin: 0 20px;
+        width: 90%;
+        height: 80vh;
+    }
+    .Content-Menu h1{
+        font-size: 26px;
+    }
+    .Content-Menu .Menu-Actions{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

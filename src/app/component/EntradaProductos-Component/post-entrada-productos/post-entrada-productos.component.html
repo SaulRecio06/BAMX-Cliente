@@ -1,0 +1,21 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Añadir nueva entrada de Producto</h1>
+
+<div id="divInputs">
+
+    <h3>Producto</h3>
+    <input type="text" [(ngModel)]="descripcion">
+
+    <h3>Codigo Sat</h3>
+    <input type="number" [(ngModel)]="codigo_sat">
+
+</div>
+<br>
+<div id="divInputs">
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Nuevo</button>
+
+
+</div>

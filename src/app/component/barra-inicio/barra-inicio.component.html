@@ -1,0 +1,22 @@
+<div class="Contenedor-Barra">
+    
+    <div class="Content-Logo">
+        <div class="{{OpenMenu}} {{Bar}}">
+            <app-bar-menu [OptionSelect]="OptionSala"></app-bar-menu>
+        </div>
+        <img src="assets/RED-BAMX.png" alt="" width="160px" height="60px" routerLink="/Home">
+    </div>
+    <div class="Content-Search">
+        <input type="text" name="" id="" class="{{Bar}}" placeholder="Buscar..."> <img src="../../assets/busca-48.png" class="{{Bar}}" alt="" width="20px" height="20px">
+    </div>
+    <div class="Content-User">
+        <img src="assets/usuario-48.png" alt="">
+        <p>Reinita18</p>
+        <img src="assets/clasificar-abajo-48.png" alt="">
+    </div>
+    <div class="{{OpenBar}} {{Bar}}">
+        <button (click)="openBarMenu()">
+            <img src="assets/{{StrButton}}.png" alt="" width="28px" height="28px">
+        </button>
+    </div>
+</div>

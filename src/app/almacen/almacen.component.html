@@ -11,12 +11,10 @@
         <p>Pagina Principal</p>
     </button>
     <div id="idActivo"></div>
-
     <button id="btnAlmacen" class="btnOpcs" (click)="goToAlmacen()">
         <img class="logos" src="../../assets/icons8-tienda-departamento-96.png">
         <p>Almacén</p>
     </button>
-
     <button id="btnEntrada" class="btnOpcs" (click)="goToEntrada()">
         <img class="logos" src="../../assets/icons8-camión-96.png">
         <p>Entrada de Productos</p>
@@ -45,10 +43,11 @@
 <div id="contenedor">
     <h1 id="idH1Princ">Almacén</h1>
 
-    <button id="btnNuevo">
+    <button (click)="openDialog()" id="btnNuevo">
 
         <img id="logoMas" src="../../assets/más-32.png">
         <p>Nuevo</p>
+
     </button>
     <table id="idContent">
         <tr>

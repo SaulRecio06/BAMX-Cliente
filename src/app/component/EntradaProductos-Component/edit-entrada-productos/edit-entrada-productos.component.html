@@ -1,0 +1,30 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Editar Prodcuto</h1>
+
+<div id="divInputs">
+    <h1>Antes</h1>
+    <h3>Producto</h3>
+    <input type="text" [(ngModel)]="descripcion" readonly>
+
+    <h3>Codigo Sat</h3>
+    <input type="number" [(ngModel)]="codigo_sat" readonly>
+
+</div>
+<div id="divInputs">
+    <h1>Despues</h1>
+    <h3>Producto</h3>
+    <input type="text" [(ngModel)]="newDescripcion">
+
+    <h3>Codigo Sat</h3>
+    <input type="number" [(ngModel)]="newCodigo_sat">
+
+</div>
+<br>
+<div>
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Actualizar</button>
+
+
+</div>

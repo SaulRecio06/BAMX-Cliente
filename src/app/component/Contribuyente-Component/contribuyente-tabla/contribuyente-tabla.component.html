@@ -1,0 +1,45 @@
+<app-barra-inicio [OptionSala]="'Contribu'"></app-barra-inicio>
+
+<div class="Content-Table">
+    <div class="Header-Table">
+        <div class="Title">
+            <h2>Contribuyentes</h2>
+        </div>
+        <div class="btn-New">
+            <button (click)="openDialog()" id="btnNuevo">
+                <img src="assets/más-32.png" alt="">
+                <p>Nuevo</p>
+            </button>
+        </div>
+    </div>
+    <div class="Table-Body">
+        <table>
+            <tr>
+                <th>Contribuyente</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>RFC</th>
+                <th>Accion</th>
+            </tr>
+            <tr *ngFor="let element of ContribuyenteList">
+                <td>{{element.descripcion}}</td>
+                <td>{{element.telefono}}</td>
+                <td>{{element.direccion}}</td>
+                <td>{{element.rfc}}</td>
+                <td class="Opcion">
+                    <input type="image" src="assets/editar-32.png" (click)="openEditDialog(element)" />
+                    <input type="image" src="assets/basura-48.png" (click)="openDeleteDialog(element)" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="Content-Pagination">
+        <div class="Pagination">
+            <button>
+                < </button>
+                    <p>1</p>
+                    <button>></button>
+        </div>
+    </div>
+</div>
