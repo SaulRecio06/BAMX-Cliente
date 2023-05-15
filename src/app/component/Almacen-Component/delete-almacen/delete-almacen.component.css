@@ -1,0 +1,14 @@
+#divActions{
+    padding-inline: 10px;
+    padding: 10px;
+}
+
+button{
+    margin-right: 10px;
+    
+}
+#divInputs{
+    float: left;
+    padding: 10px;
+    font-size: 24px;
+}

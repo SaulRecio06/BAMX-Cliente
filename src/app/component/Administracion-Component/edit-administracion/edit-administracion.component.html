@@ -1,0 +1,32 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Editar Administracion</h1>
+
+<div id="divInputs">
+    <h1>Antes</h1>
+
+    <h3>Nombre</h3>
+    <input type="text" [(ngModel)]="nombre" value="this.nombre" name="nombre" readonly>
+
+    <h3>Rol Id</h3>
+    <input type="number" [(ngModel)]="rolId" value=" this.rolId" name="rolId" readonly>
+
+
+
+</div>
+<div id="divInputs">
+    <h1>Despues</h1>
+    <h3>Nombre</h3>
+    <input type="text" [(ngModel)]="Newnombre">
+
+    <h3>Rol Id</h3>
+    <input type="number" [(ngModel)]="NewrolId">
+</div>
+<br>
+<div>
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Actualizar</button>
+
+
+</div>

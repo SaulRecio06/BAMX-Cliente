@@ -1,0 +1,32 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Añadir nuevo almacen</h1>
+
+<div id="divInputs">
+
+    <h3>Folio</h3>
+    <input type="number" [(ngModel)]="folio">
+
+    <h3>Kilogramos</h3>
+    <input type="number" [(ngModel)]="kilogramos">
+
+    <h3>Importe</h3>
+    <input type="number" [(ngModel)]="importe">
+
+    <h3>Recibio</h3>
+    <input type="number" [(ngModel)]="recibio">
+
+    <h3>Clave de producto</h3>
+    <input type="number" [(ngModel)]="clave_producto">
+
+    <h3>Contribuyente</h3>
+    <input matInput type="text" [(ngModel)]="contribuyente">
+
+</div>
+<div id="divActions">
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Agregar</button>
+
+
+</div>

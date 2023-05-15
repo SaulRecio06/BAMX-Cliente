@@ -1,0 +1,153 @@
+.Content-Table {
+    position: absolute;
+    background-color: white;
+    width: 87%;
+    /*height: 80vh;*/
+    top: 90px;
+    left: 140px;
+    border-radius: 20px;
+    border-bottom: 3px solid #727171;
+
+}
+
+/*Cabeza de Almacen*/
+.Content-Table .Header-Table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 20px;
+}
+
+.Content-Table .Header-Table .Title {
+    display: flex;
+    align-items: center;
+}
+
+.Content-Table .Header-Table .Title h2 {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 48px;
+    color: #727171;
+    font-variation-settings: 'slnt' 0;
+}
+
+.Content-Table .Header-Table .btn-New {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 170px;
+}
+
+.Content-Table .Header-Table .btn-New button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: orange;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.Content-Table .Header-Table .btn-New button img {
+    margin: 0 20px 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/*Cuerpo (Tabla)*/
+.Content-Table .Table-Body {
+    height: 50vh;
+    margin: 0 20px;
+}
+
+.Content-Table .Table-Body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.Content-Table .Table-Body table tr:nth-child(even){
+    background-color: #F5F1E7;
+}
+.Content-Table .Table-Body table tr th,
+.Content-Table .Table-Body table tr td {
+    border: 2px solid #F5F1E7;
+    text-align: center;
+    padding: 8px;
+    
+}
+.Opcion img{
+    width: 20px;
+    margin: 0 10px;
+    cursor:pointer;
+}
+/*Footer Paginacion*/
+
+.Content-Pagination{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.Content-Pagination .Pagination{
+    display: flex;
+    margin-right: 80px;
+}
+.Content-Pagination .Pagination button,
+.Content-Pagination .Pagination p
+{
+    width: 35px;
+    height: 35px;
+}
+.Content-Pagination .Pagination button{
+    background-color: white;
+    border: 2px solid #F5F1E7;
+}
+.Content-Pagination .Pagination p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    color: white;
+}
+
+@media (max-width:700px){
+    .Content-Table{
+        top: 385px;
+        left: 20px;
+        width: 92%;
+        height: 100%;
+    }
+    .Content-Table .Header-Table .Title h2{
+        font-size: 32px;
+    }
+    .Content-Table .Header-Table .btn-New{
+        margin-left: 120px;
+    }
+    .Content-Table .Table-Body table{
+        table-layout: fixed;
+        overflow-wrap: break-word;
+    }
+    .Content-Pagination{
+        margin-top: 130px;
+    }
+}
+@media (min-width:700px){
+    .Content-Table{
+        width: 75%;
+    }
+    .Content-Table .Header-Table .Title h2{
+        font-size: 34px;
+    }
+    .Content-Table .Header-Table .btn-New{
+        margin-left: 160px;
+    }
+    .Content-Table .Table-Body table{
+        table-layout: fixed;
+        overflow-wrap: break-word;
+    }
+    .Content-Pagination{
+        margin-top: 100px;
+    }
+}
