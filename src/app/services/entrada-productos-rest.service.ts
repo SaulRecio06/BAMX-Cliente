@@ -4,25 +4,27 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ContribuyentesRestService {
-  readonly ApiUrl = "http://localhost:3000/contribuyentes";
+export class EntradaProductosRestService {
 
+
+  readonly ApiUrl = "http://localhost:3000/producto";
   constructor(private http: HttpClient) { }
 
-  public getContribuyentes(): any {
+  public getEntradaProductos(): any {
     return this.http.get<any>(this.ApiUrl);
   }
 
-  public getContribuyenteId(id: any): any {
+
+  public getEntradaProductosId(id: any): any {
     return this.http.get<any>(this.ApiUrl + '/' + id);
   }
 
 
-  public postContribuyente(data: any): any {
+  public postEntradaProductos(data: any): any {
     return this.http.post<any>(this.ApiUrl, data);
   }
 
-  public patchContribuyente(id: any, data: any): any {
+  public patchEntradaProductos(id: any, data: any): any {
     console.log(data);
     console.log(id);
     return this.http.patch(this.ApiUrl + '/' + id, data).subscribe((example: any) => {
@@ -30,12 +32,10 @@ export class ContribuyentesRestService {
     });
   }
 
-  public deleteContribuyente(id: any): any {
+  public deleteEntradaProductos(id: any): any {
     console.log(this.ApiUrl + '/' + id);
     return this.http.delete(this.ApiUrl + '/' + id);
   }
-
-
 
 
 }

@@ -10,6 +10,7 @@ export class AlmacenRestService {
   readonly ApiUrl = "http://localhost:3000/almacen";
 
 
+
   public getAlmacen(): any {
     return this.http.get<any>(this.ApiUrl);
   }
@@ -23,9 +24,19 @@ export class AlmacenRestService {
     return this.http.post<any>(this.ApiUrl, data);
   }
 
-  public putAlmacen(data: any, id: string): any {
-    this.http.put(this.ApiUrl + '/' + id, data);
+  public patchAlmacen(id: any, data: any): any {
+    console.log(data);
+    console.log(id);
+    return this.http.patch(this.ApiUrl + '/' + id, data).subscribe((example: any) => {
+      console.log(example);
+    });
   }
+
+  public deleteAlmacen(id: any): any {
+    console.log(this.ApiUrl + '/' + id);
+    return this.http.delete(this.ApiUrl + '/' + id);
+  }
+
 
 
 

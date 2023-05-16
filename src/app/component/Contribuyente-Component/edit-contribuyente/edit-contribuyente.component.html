@@ -1,0 +1,44 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Editar Contribuyente</h1>
+
+<div id="divInputs">
+
+    <h3>Nombre</h3>
+    <input type="text" [(ngModel)]="descripcion" readonly>
+
+    <h3>Telefono</h3>
+    <input type="number" [(ngModel)]="telefono" readonly>
+
+    <h3>Direccion</h3>
+    <input type="text" [(ngModel)]="direccion" readonly>
+
+    <h3>Rfc</h3>
+    <input type="text" [(ngModel)]="rfc" readonly>
+
+
+</div>
+<div id="divInputs">
+
+    <h3>Nombre</h3>
+    <input type="text" [(ngModel)]="Newdescripcion">
+
+    <h3>Telefono</h3>
+    <input type="number" [(ngModel)]="Newtelefono">
+
+    <h3>Direccion</h3>
+    <input type="text" [(ngModel)]="Newdireccion">
+
+    <h3>Rfc</h3>
+    <input type="text" [(ngModel)]="Newrfc">
+
+
+</div>
+<br>
+
+<div>
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Actualizar</button>
+
+</div>

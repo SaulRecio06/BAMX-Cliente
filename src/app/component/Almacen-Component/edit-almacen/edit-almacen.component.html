@@ -1,0 +1,53 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Editar Almacen</h1>
+
+<div id="divInputs">
+    <h1>Antes</h1>
+    <h3>Folio</h3>
+    <input type="number" [(ngModel)]="folio" value="this.folio" readonly>
+
+    <h3>Kilogramos</h3>
+    <input type="number" [(ngModel)]="kilogramos" value="this.kilogramos" readonly>
+
+    <h3>Importe</h3>
+    <input type="number" [(ngModel)]="importe" value="this.importe" readonly>
+
+    <h3>Recibio</h3>
+    <input type="number" [(ngModel)]="recibio" value="this.recibio" readonly>
+
+    <h3>Clave de producto</h3>
+    <input type="number" [(ngModel)]="clave_producto" value="this.clave_producto" readonly>
+
+    <h3>Contribuyente</h3>
+    <input type="text" [(ngModel)]="contribuyente" value="this.contribuyente" readonly>
+
+</div>
+<div id="divInputs">
+    <h1>Despues</h1>
+    <h3>Folio</h3>
+    <input type="number" [(ngModel)]="Newfolio">
+
+    <h3>Kilogramos</h3>
+    <input type="number" [(ngModel)]="Newkilogramos">
+
+    <h3>Importe</h3>
+    <input type="number" [(ngModel)]="Newimporte">
+
+    <h3>Recibio</h3>
+    <input type="number" [(ngModel)]="Newrecibio">
+
+    <h3>Clave de producto</h3>
+    <input type="number" [(ngModel)]="Newclave_producto">
+
+    <h3>Contribuyente</h3>
+    <input type="text" [(ngModel)]="Newcontribuyente">
+</div>
+<br>
+<div id="divActions">
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Actualizar</button>
+
+
+</div>

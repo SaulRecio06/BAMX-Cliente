@@ -1,0 +1,43 @@
+<app-barra-inicio [OptionSala]="'Entrada'"></app-barra-inicio>
+
+<div class="Content-Table">
+    <div class="Header-Table">
+        <div class="Title">
+            <h2>Entrada de Producto</h2>
+        </div>
+        <div class="btn-New">
+            <button (click)="openDialog()" id="btnNuevo">
+                <img src="assets/más-32.png" alt="">
+                <p>Nuevo</p>
+            </button>
+        </div>
+    </div>
+    <div class="Table-Body">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Producto</th>
+                <th>Codigo Sat</th>
+                <th>Accion</th>
+            </tr>
+            <tr *ngFor="let element of EntradaProductosList">
+                <td>{{element.id}}</td>
+                <td>{{element.descripcion}}</td>
+                <td>{{element.codigo_sat}}</td>
+                <td class="Opcion">
+                    <input type="image" src="assets/editar-32.png" (click)="openEditDialog(element)" />
+                    <input type="image" src="assets/basura-48.png" (click)="openDeleteDialog(element)" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="Content-Pagination">
+        <div class="Pagination">
+            <button>
+                < </button>
+                    <p>1</p>
+                    <button>></button>
+        </div>
+    </div>
+</div>
