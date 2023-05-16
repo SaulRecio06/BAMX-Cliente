@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { EmpleadoRestService } from 'src/app/services/empleado-rest.service';
+import { RolRestService } from 'src/app/services/rol-rest.service';
 
 @Component({
   selector: 'app-post-administracion',
@@ -8,13 +9,19 @@ import { EmpleadoRestService } from 'src/app/services/empleado-rest.service';
   styleUrls: ['./post-administracion.component.css']
 })
 export class PostAdministracionComponent {
-  constructor(private ref: MatDialogRef<PostAdministracionComponent>, private empleadoService: EmpleadoRestService) {
+  constructor(private ref: MatDialogRef<PostAdministracionComponent>, private empleadoService: EmpleadoRestService,
+    private rolService: RolRestService) {
 
+  }
+
+  ngOnInit(): void {
+    this.RolGet();
   }
 
   nombre: any;
   rolId: any;
 
+  roles: any;
 
 
   prueba() {
@@ -37,6 +44,14 @@ export class PostAdministracionComponent {
 
   closePopUp() {
     this.ref.close()
+  }
+
+  RolGet() {
+    this.rolService.get().subscribe((_Response: any) => {
+  
+      this.roles = _Response;
+      console.log(this.roles);
+    })
   }
 
   AgregarAlmacen(data: any) {

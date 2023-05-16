@@ -9,7 +9,7 @@
     padding: 10px;
     font-size: 24px;
 }
-input[type="text"]{
+input[type="text"], option, select{
     font-size: 24px;
 }
 

@@ -9,7 +9,12 @@
     <input type="text" [(ngModel)]="nombre">
 
     <h3>Rol Id</h3>
-    <input type="number" [(ngModel)]="rolId">
+    <!-- <input type="number" [(ngModel)]="rolId"> -->
+    <select [(ngModel)]="rolId">
+        <option *ngFor="let rol of roles" [value]="rol.id">
+          {{ rol.descripcion }}
+        </option>
+    </select>
 
 
 
