@@ -21,7 +21,12 @@
     <input type="number" [(ngModel)]="clave_producto">
 
     <h3>Contribuyente</h3>
-    <input matInput type="text" [(ngModel)]="contribuyente">
+    <!-- <input matInput type="text" [(ngModel)]="contribuyente"> -->
+    <select [(ngModel)]="contribuyente">
+        <option *ngFor="let contribuyente of contribuyentes" [value]="contribuyente.id">
+          {{ contribuyente.descripcion }}
+        </option>
+    </select>
 
 </div>
 <div id="divActions">
