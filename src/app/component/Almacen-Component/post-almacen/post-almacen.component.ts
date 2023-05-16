@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AlmacenRestService } from 'src/app/services/almacen-rest.service';
 import { ContribuyentesRestService } from 'src/app/services/contribuyentes-rest.service';
+import { EmpleadoRestService } from 'src/app/services/empleado-rest.service';
 @Component({
   selector: 'app-post-almacen',
   templateUrl: './post-almacen.component.html',
@@ -9,12 +10,14 @@ import { ContribuyentesRestService } from 'src/app/services/contribuyentes-rest.
 })
 export class PostAlmacenComponent {
   constructor(private ref: MatDialogRef<PostAlmacenComponent>,
-    private almacenService: AlmacenRestService, private contribuyenteService: ContribuyentesRestService) {
+    private almacenService: AlmacenRestService, private contribuyenteService: ContribuyentesRestService,
+    private empleadoService: EmpleadoRestService) {
 
   }
 
   ngOnInit(): void {
     this.ContribuyenteGet();
+    this.EmpleadoGet();
   }
 
   folio: Number = 0;
@@ -25,6 +28,7 @@ export class PostAlmacenComponent {
   clave_producto: Number = 0;
 
   contribuyentes: any;
+  empleados: any;
 
 
   prueba() {
@@ -61,6 +65,14 @@ export class PostAlmacenComponent {
     this.almacenService.postAlmacen(data).subscribe((res: any) => {
       console.log(res);
     });
+  }
+
+  EmpleadoGet() {
+    this.empleadoService.getEmpleado().subscribe((_Response: any) => {
+  
+      this.empleados = _Response;
+      console.log(this.empleados);
+    })
   }
 
   public ContribuyenteGet() {

@@ -15,7 +15,12 @@
     <input type="number" [(ngModel)]="importe">
 
     <h3>Recibio</h3>
-    <input type="number" [(ngModel)]="recibio">
+    <!-- <input type="number" [(ngModel)]="recibio"> -->
+    <select [(ngModel)]="recibio">
+        <option *ngFor="let empleado of empleados" [value]="empleado.id">
+          {{ empleado.nombre }}
+        </option>
+    </select>
 
     <h3>Clave de producto</h3>
     <input type="number" [(ngModel)]="clave_producto">
