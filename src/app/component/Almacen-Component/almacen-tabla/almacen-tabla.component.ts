@@ -19,7 +19,7 @@ export class AlmacenTablaComponent implements OnInit {
   kilogramos: any;
   importe: any;
   fecha_entrada: any;
-  recibio: any;
+  recibioId: any;
   clave_producto: any;
   contribuyente: any;
 
@@ -38,7 +38,7 @@ export class AlmacenTablaComponent implements OnInit {
     this.kilogramos = element['kilogramos'];
     this.importe = element['importe'];
     this.fecha_entrada = element['fecha_entrada'];
-    this.recibio = element['recibio']['id'];
+    this.recibioId = element['recibioId']['id'];
     this.clave_producto = element['clave_producto']['id'];
     this.contribuyente = element['contribuyente']['id'];
 
@@ -49,7 +49,7 @@ export class AlmacenTablaComponent implements OnInit {
         kilogramos: this.kilogramos,
         importe: this.importe,
         fecha_entrada: this.fecha_entrada,
-        recibio: this.recibio,
+        recibioId: this.recibioId,
         clave_producto: this.clave_producto,
         contribuyente: this.contribuyente
       }
@@ -73,6 +73,7 @@ export class AlmacenTablaComponent implements OnInit {
   public AlmacenGet() {
     this.AlmacenService.getAlmacen().subscribe((_Response: any) => {
       this.AlmacenList = _Response;
+      console.log(_Response);
     })
   }
 

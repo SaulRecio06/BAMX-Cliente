@@ -12,7 +12,7 @@ export class EditAlmacenComponent {
   kilogramos: any;
   importe: any;
   fecha_entrada: any;
-  recibio: any;
+  recibioId: any;
   clave_producto: any;
   contribuyente: any;
 
@@ -20,7 +20,7 @@ export class EditAlmacenComponent {
   Newkilogramos: any;
   Newimporte: any;
   Newfecha_entrada: any;
-  Newrecibio: any;
+  NewrecibioId: any;
   Newclave_producto: any;
   Newcontribuyente: any;
 
@@ -30,7 +30,7 @@ export class EditAlmacenComponent {
     this.kilogramos = data.kilogramos;
     this.importe = data.importe;
     this.fecha_entrada = data.fecha_entrada;
-    this.recibio = data.recibio;
+    this.recibioId = data.recibioId;
     this.clave_producto = data.clave_producto;
     this.contribuyente = data.contribuyente;
   }
@@ -40,7 +40,7 @@ export class EditAlmacenComponent {
       folio: this.Newfolio,
       kilogramos: this.Newkilogramos,
       importe: this.Newimporte,
-      recibio: this.Newrecibio,
+      recibioId: this.NewrecibioId,
       contribuyente: this.Newcontribuyente,
       clave_producto: this.Newclave_producto,
     }
@@ -61,7 +61,7 @@ type dataAlmacen = {
   folio: Number;
   kilogramos: Number;
   importe: Number;
-  recibio: Number;
+  recibioId: Number;
   contribuyente: string;
   clave_producto: Number;
 
