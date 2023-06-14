@@ -11,9 +11,13 @@ export class EditEntradaProductosComponent {
   id: any;
   descripcion: any;
   codigo_sat: any;
+  tipo: any;
+
 
   newDescripcion: any;
   newCodigo_sat: any;
+  newTipo: any;
+
 
   constructor(public ref: MatDialogRef<EditEntradaProductosComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
@@ -21,12 +25,16 @@ export class EditEntradaProductosComponent {
     this.id = data.id;
     this.descripcion = data.descripcion;
     this.codigo_sat = data.codigo_sat;
+    this.tipo = data.tipo;
+
   }
 
   prueba() {
     var data: dataEntradaProductos = {
       descripcion: this.newDescripcion,
       codigo_sat: this.newCodigo_sat,
+      tipo: this.newTipo,
+
 
     }
     var id = this.id;
@@ -45,5 +53,7 @@ export class EditEntradaProductosComponent {
 type dataEntradaProductos = {
   descripcion: string;
   codigo_sat: number;
+  tipo: string;
+
 
 };

@@ -5,6 +5,8 @@ import { EditAdministracionComponent } from '../edit-administracion/edit-adminis
 import { DeleteAdministracionComponent } from '../delete-administracion/delete-administracion.component';
 import { PostAdministracionComponent } from '../post-administracion/post-administracion.component';
 
+
+
 @Component({
   selector: 'app-admin-tabla',
   templateUrl: './admin-tabla.component.html',
@@ -20,7 +22,8 @@ export class AdminTablaComponent implements OnInit {
   created: any;
   nombre: any;
   rolId: any;
-
+  paginaActual = 1;
+  itemsPorPagina = 5;
 
   ngOnInit(): void {
     this.EmpleadoGet();
@@ -62,5 +65,29 @@ export class AdminTablaComponent implements OnInit {
     });
   }
 
+
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
+
+    if (!(this.paginaActual == Math.ceil(this.EmpleadoList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 }

@@ -16,6 +16,7 @@ export class EditAlmacenComponent {
   clave_producto: any;
   contribuyente: any;
 
+
   Newfolio: any;
   Newkilogramos: any;
   Newimporte: any;
@@ -43,6 +44,7 @@ export class EditAlmacenComponent {
       recibioId: this.NewrecibioId,
       contribuyente: this.Newcontribuyente,
       clave_producto: this.Newclave_producto,
+      fecha_entrada: this.Newfecha_entrada
     }
     var id = this.id;
 
@@ -64,5 +66,6 @@ type dataAlmacen = {
   recibioId: Number;
   contribuyente: string;
   clave_producto: Number;
+  fecha_entrada: string;
 
 };

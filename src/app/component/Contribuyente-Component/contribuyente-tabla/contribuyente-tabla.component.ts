@@ -20,7 +20,8 @@ export class ContribuyenteTablaComponent implements OnInit {
 
   telefono: any;
   rfc: any;
-
+  paginaActual = 1;
+  itemsPorPagina = 5;
 
   public getJsonValue: any;
   ngOnInit(): void {
@@ -72,6 +73,28 @@ export class ContribuyenteTablaComponent implements OnInit {
   }
 
 
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
 
+    if (!(this.paginaActual == Math.ceil(this.ContribuyenteList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 }

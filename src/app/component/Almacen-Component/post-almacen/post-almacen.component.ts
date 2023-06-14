@@ -17,6 +17,7 @@ export class PostAlmacenComponent {
   recibio: Number = 0;
   contribuyente: string = '';
   clave_producto: Number = 0;
+  fecha_entrada: string = "";
 
 
 
@@ -31,6 +32,7 @@ export class PostAlmacenComponent {
       recibio: this.recibio,
       contribuyente: this.contribuyente,
       clave_producto: this.clave_producto,
+      fecha_entrada: this.fecha_entrada
     };
     // console.log(JSON.stringify(data));
     // console.log(data);
@@ -66,5 +68,5 @@ type dataAlmacen = {
   recibio: Number;
   contribuyente: string;
   clave_producto: Number;
-
+  fecha_entrada: string;
 };

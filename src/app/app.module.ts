@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { BarraInicioComponent } from './component/barra-inicio/barra-inicio.component';
 import { MenuInicioComponent } from './component/menu-inicio/menu-inicio.component';
 import { BarMenuComponent } from './component/bar-menu/bar-menu.component';
@@ -33,8 +32,12 @@ import { DeleteContribuyenteComponent } from './component/Contribuyente-Componen
 import { PostEntradaProductosComponent } from './component/EntradaProductos-Component/post-entrada-productos/post-entrada-productos.component';
 import { EditEntradaProductosComponent } from './component/EntradaProductos-Component/edit-entrada-productos/edit-entrada-productos.component';
 import { DeleteEntradaProductosComponent } from './component/EntradaProductos-Component/delete-entrada-productos/delete-entrada-productos.component';
+import { PostSalidasProductosComponent } from './component/SalidaProductos-Component/post-salidas-productos/post-salidas-productos.component';
+import { EditSalidasProductosComponent } from './component/SalidaProductos-Component/edit-salidas-productos/edit-salidas-productos.component';
+import { DeleteSalidasProductosComponent } from './component/SalidaProductos-Component/delete-salidas-productos/delete-salidas-productos.component';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     DeleteContribuyenteComponent,
     PostEntradaProductosComponent,
     EditEntradaProductosComponent,
-    DeleteEntradaProductosComponent
+    DeleteEntradaProductosComponent,
+    PostSalidasProductosComponent,
+    EditSalidasProductosComponent,
+    DeleteSalidasProductosComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +79,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
-    FormsModule, MatPaginatorModule
+    FormsModule, MatPaginatorModule,
+    MatTableModule, MatSortModule
 
   ],
   providers: [],

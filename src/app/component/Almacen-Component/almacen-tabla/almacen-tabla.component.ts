@@ -22,7 +22,8 @@ export class AlmacenTablaComponent implements OnInit {
   recibioId: any;
   clave_producto: any;
   contribuyente: any;
-
+  paginaActual = 1;
+  itemsPorPagina = 5;
   public getJsonValue: any;
   ngOnInit(): void {
     this.AlmacenGet();
@@ -76,7 +77,29 @@ export class AlmacenTablaComponent implements OnInit {
       console.log(_Response);
     })
   }
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
 
+    if (!(this.paginaActual == Math.ceil(this.AlmacenList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 
 
