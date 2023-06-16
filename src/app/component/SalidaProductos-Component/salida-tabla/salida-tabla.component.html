@@ -1,41 +1,62 @@
 <app-barra-inicio [OptionSala]="'Salida'"></app-barra-inicio>
-
 <div class="Content-Table">
     <div class="Header-Table">
         <div class="Title">
             <h2>Salida de Producto</h2>
         </div>
         <div class="btn-New">
-            <button>
+            <button (click)="openDialog()" id="btnNuevo">
                 <img src="assets/más-32.png" alt="">
                 <p>Nuevo</p>
             </button>
+        </div>
+        <div class="dataTables_length"><label>Mostrar
+                <select [(ngModel)]="itemsPorPagina" (change)="filterFields()">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select> Campos</label>
         </div>
     </div>
     <div class="Table-Body">
         <table>
             <tr>
-                <th>Codigo Sat</th>
-                <th>Producto</th>
-                
-                <th>Opciones</th>
+                <th>Id</th>
+                <th>Folio de Salida</th>
+                <th>Producto De Almacen</th>
+                <th>Titulo</th>
+                <th>Peso (Kg)</th>
+                <th>Destinatario</th>
+                <th>Observaciones</th>
+                <th>Concepto</th>
+                <th>Accion</th>
             </tr>
-            <tr *ngFor="let element of Obj">
-                <td>{{element.Codigo}}</td>
-                <td>{{element.Producto}}</td>
+            <tr
+                *ngFor="let element of SalidaProductosList.slice((paginaActual-1)*itemsPorPagina, paginaActual*itemsPorPagina)">
+                <td>{{element.id}}</td>
+                <td>{{element.folio_salida}}</td>
+                <td>{{element.clave_producto.clave_producto.descripcion}}</td>
+                <td>{{element.titulo}}</td>
+                <td>{{element.peso}}</td>
+                <td>{{element.destinatario}}</td>
+                <td>{{element.observaciones}}</td>
+                <td>{{element.concepto}}</td>
                 <td class="Opcion">
-                    <img src="assets/editar-32.png" alt="">
-                    <img src="assets/basura-48.png" alt="">
+                    <input type="image" src="assets/editar-32.png" (click)="openEditDialog(element)" />
+                    <input type="image" src="assets/basura-48.png" (click)="openDeleteDialog(element)" />
                 </td>
             </tr>
         </table>
     </div>
-    
+
     <div class="Content-Pagination">
         <div class="Pagination">
-            <button><</button>
-            <p>1</p>
-            <button>></button>
+            <button (click)="previousPage()">
+                < </button>
+                    <p>{{this.paginaActual}}</p>
+                    <button (click)="nextPage()">></button>
         </div>
     </div>
 </div>

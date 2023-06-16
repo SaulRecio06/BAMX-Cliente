@@ -5,6 +5,8 @@ import { EditAdministracionComponent } from '../edit-administracion/edit-adminis
 import { DeleteAdministracionComponent } from '../delete-administracion/delete-administracion.component';
 import { PostAdministracionComponent } from '../post-administracion/post-administracion.component';
 
+
+
 @Component({
   selector: 'app-admin-tabla',
   templateUrl: './admin-tabla.component.html',
@@ -20,7 +22,10 @@ export class AdminTablaComponent implements OnInit {
   created: any;
   nombre: any;
   rolId: any;
+  rolIdName: any;
 
+  paginaActual = 1;
+  itemsPorPagina = 5;
 
   ngOnInit(): void {
     this.EmpleadoGet();
@@ -39,12 +44,15 @@ export class AdminTablaComponent implements OnInit {
     this.id = element['id'];
     this.nombre = element['nombre'];
     this.rolId = element['rolId']['id'];
+    this.rolIdName = element['rolId']['descripcion'];
+
 
     this.dialogRef.open(EditAdministracionComponent, {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
         id: this.id,
         nombre: this.nombre,
-        rolId: this.rolId
+        rolId: this.rolId,
+        rolIdName: this.rolIdName,
       }
     })
 
@@ -62,5 +70,29 @@ export class AdminTablaComponent implements OnInit {
     });
   }
 
+
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
+
+    if (!(this.paginaActual == Math.ceil(this.EmpleadoList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 }

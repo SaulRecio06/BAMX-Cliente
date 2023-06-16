@@ -10,7 +10,7 @@ import { ReportesTablaComponent } from './component/Reportes-Component/reportes-
 import { LoginBaseComponent } from './component/login-base/login-base.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/Home", pathMatch: "full" },
+  { path: "", redirectTo: "/Login", pathMatch: "full" },
   { path: "Login", component: LoginBaseComponent },
   { path: "Home", component: MenuInicioComponent },
   { path: "almacen", component: AlmacenTablaComponent },

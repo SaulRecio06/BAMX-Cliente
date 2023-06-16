@@ -11,6 +11,15 @@
                 <p>Nuevo</p>
             </button>
         </div>
+        <div class="dataTables_length"><label>Mostrar
+                <select [(ngModel)]="itemsPorPagina" (change)="filterFields()">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select> Campos</label>
+        </div>
     </div>
     <div class="Table-Body">
         <table>
@@ -21,7 +30,8 @@
                 <th>RFC</th>
                 <th>Accion</th>
             </tr>
-            <tr *ngFor="let element of ContribuyenteList">
+            <tr
+                *ngFor="let element of ContribuyenteList.slice((paginaActual-1)*itemsPorPagina, paginaActual*itemsPorPagina)">
                 <td>{{element.descripcion}}</td>
                 <td>{{element.telefono}}</td>
                 <td>{{element.direccion}}</td>
@@ -36,10 +46,10 @@
 
     <div class="Content-Pagination">
         <div class="Pagination">
-            <button>
+            <button (click)="previousPage()">
                 < </button>
-                    <p>1</p>
-                    <button>></button>
+                    <p>{{this.paginaActual}}</p>
+                    <button (click)="nextPage()">></button>
         </div>
     </div>
 </div>

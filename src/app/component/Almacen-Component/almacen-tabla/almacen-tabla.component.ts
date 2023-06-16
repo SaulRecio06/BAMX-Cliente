@@ -19,10 +19,14 @@ export class AlmacenTablaComponent implements OnInit {
   kilogramos: any;
   importe: any;
   fecha_entrada: any;
-  recibio: any;
+  recibioId: any;
+  recibioIdName: any;
   clave_producto: any;
   contribuyente: any;
+  contribuyenteName: any;
 
+  paginaActual = 1;
+  itemsPorPagina = 5;
   public getJsonValue: any;
   ngOnInit(): void {
     this.AlmacenGet();
@@ -38,9 +42,12 @@ export class AlmacenTablaComponent implements OnInit {
     this.kilogramos = element['kilogramos'];
     this.importe = element['importe'];
     this.fecha_entrada = element['fecha_entrada'];
-    this.recibio = element['recibio']['id'];
+    this.recibioId = element['recibioId']['id'];
+    this.recibioIdName = element['recibioId']['nombre'];
     this.clave_producto = element['clave_producto']['id'];
     this.contribuyente = element['contribuyente']['id'];
+    this.contribuyenteName = element['contribuyente']['descripcion'];
+
 
     this.dialogRef.open(EditAlmacenComponent, {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
@@ -49,9 +56,12 @@ export class AlmacenTablaComponent implements OnInit {
         kilogramos: this.kilogramos,
         importe: this.importe,
         fecha_entrada: this.fecha_entrada,
-        recibio: this.recibio,
+        recibioId: this.recibioId,
+        recibioIdName: this.recibioIdName,
         clave_producto: this.clave_producto,
-        contribuyente: this.contribuyente
+        contribuyente: this.contribuyente,
+        contribuyenteName: this.contribuyenteName,
+
       }
     })
 
@@ -73,9 +83,32 @@ export class AlmacenTablaComponent implements OnInit {
   public AlmacenGet() {
     this.AlmacenService.getAlmacen().subscribe((_Response: any) => {
       this.AlmacenList = _Response;
+      console.log(_Response);
     })
   }
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
 
+    if (!(this.paginaActual == Math.ceil(this.AlmacenList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 
 

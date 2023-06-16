@@ -1,0 +1,66 @@
+<button (click)="closePopUp()" mat-icon-button style="float:right;margin:5px;">
+    <mat-icon>close</mat-icon>
+</button>
+<h1>Editar Salida de Producto</h1>
+
+<div id="divInputs">
+    <h1>Antes</h1>
+    <h3>Folio Salida</h3>
+    <input type="text" [(ngModel)]="folio_salida" readonly>
+
+    <h3>Producto</h3>
+    <input type="text" [(ngModel)]="clave_producto" readonly>
+
+    <h3>Titulo</h3>
+    <input type="text" [(ngModel)]="titulo" readonly>
+
+    <h3>Peso</h3>
+    <input type="number" [(ngModel)]="peso" readonly>
+
+    <h3>Destinatario</h3>
+    <input type="text" [(ngModel)]="destinatario" readonly>
+
+    <h3>Observaciones</h3>
+    <input type="text" [(ngModel)]="observaciones" readonly>
+
+    <h3>Concepto</h3>
+    <input type="text" [(ngModel)]="concepto" readonly>
+
+</div>
+<div id="divInputs">
+    <h1>Despues</h1>
+    <h3>Folio Salida</h3>
+    <input type="text" [(ngModel)]="Newfolio_salida">
+
+    <h3>Producto</h3>
+    <div class="dataTables_length">
+        <select [(ngModel)]="Newclave_producto">
+            <option *ngFor="let producto of almacenList" [value]="producto.id">{{producto.clave_producto.descripcion}}
+            </option>
+
+        </select>
+    </div>
+
+    <h3>Titulo</h3>
+    <input type="text" [(ngModel)]="Newtitulo">
+
+    <h3>Peso</h3>
+    <input type="number" [(ngModel)]="Newpeso">
+
+    <h3>Destinatario</h3>
+    <input type="text" [(ngModel)]="Newdestinatario">
+
+    <h3>Observaciones</h3>
+    <input type="text" [(ngModel)]="Newobservaciones">
+
+    <h3>Concepto</h3>
+    <input type="text" [(ngModel)]="Newconcepto">
+
+</div>
+<br>
+<div id="divInputs">
+
+    <button mat-raised-button color="primary" (click)="prueba()" style="font-size: 24px;">Editar</button>
+
+
+</div>

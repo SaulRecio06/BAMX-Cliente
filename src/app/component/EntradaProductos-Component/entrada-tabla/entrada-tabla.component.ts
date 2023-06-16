@@ -17,7 +17,10 @@ export class EntradaTablaComponent implements OnInit {
   id: any;
   descripcion: any;
   codigo_sat: any;
+  tipo: any;
 
+  paginaActual = 1;
+  itemsPorPagina = 5;
   public getJsonValue: any;
   ngOnInit(): void {
     this.EntradaProductosGet();
@@ -31,13 +34,16 @@ export class EntradaTablaComponent implements OnInit {
     this.id = element['id'];
     this.descripcion = element['descripcion'];
     this.codigo_sat = element['codigo_sat'];
+    this.tipo = element['tipo'];
 
 
     this.dialogRef.open(EditEntradaProductosComponent, {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
         id: this.id,
         descripcion: this.descripcion,
-        codigo_sat: this.codigo_sat
+        codigo_sat: this.codigo_sat,
+        tipo: this.tipo
+
 
       }
     })
@@ -62,7 +68,29 @@ export class EntradaTablaComponent implements OnInit {
       this.EntradaProductosList = _Response;
     })
   }
+  nextPage() {
+    // console.log(this.SalidaProductosList.length);
+    // console.log(Math.ceil(this.SalidaProductosList.length / this.itemsPorPagina));
 
+    if (!(this.paginaActual == Math.ceil(this.EntradaProductosList.length / this.itemsPorPagina))) {
+      this.paginaActual++;
+    }
+
+  }
+
+  previousPage() {
+    if (this.paginaActual == 1) {
+
+      this.paginaActual = 1;
+    }
+    else {
+      this.paginaActual--;
+    }
+  }
+
+  filterFields() {
+    this.itemsPorPagina;
+  }
 
 
 

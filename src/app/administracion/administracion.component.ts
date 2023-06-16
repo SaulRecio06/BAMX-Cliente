@@ -19,7 +19,7 @@ export class AdministracionComponent {
 
 
   public EmpleadoGet() {
-    this.EmpleadoService.get().subscribe((_Response: any) => {
+    this.EmpleadoService.getEmpleado().subscribe((_Response: any) => {
       this.EmpleadoList = _Response;
       console.log(this.EmpleadoList);
     })

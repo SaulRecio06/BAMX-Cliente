@@ -9,8 +9,9 @@
     <h3>Nombre</h3>
     <input type="text" [(ngModel)]="nombre" value="this.nombre" name="nombre" readonly>
 
-    <h3>Rol Id</h3>
-    <input type="number" [(ngModel)]="rolId" value=" this.rolId" name="rolId" readonly>
+    <h3>Rol</h3>
+
+    <input type="text" [(ngModel)]="rolIdName" value="this.rolIdName" name="rolIdName" readonly>
 
 
 
@@ -20,8 +21,12 @@
     <h3>Nombre</h3>
     <input type="text" [(ngModel)]="Newnombre">
 
-    <h3>Rol Id</h3>
-    <input type="number" [(ngModel)]="NewrolId">
+    <h3>Rol</h3>
+    <div class="dataTables_length">
+        <select [(ngModel)]="NewrolId">
+            <option *ngFor="let rol of RolList" [value]="rol.id">{{rol.descripcion}}</option>
+        </select>
+    </div>
 </div>
 <br>
 <div>

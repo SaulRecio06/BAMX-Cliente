@@ -8,8 +8,12 @@
     <h3>Nombre</h3>
     <input type="text" [(ngModel)]="nombre">
 
-    <h3>Rol Id</h3>
-    <input type="number" [(ngModel)]="rolId">
+    <h3>Rol</h3>
+    <div class="dataTables_length">
+        <select [(ngModel)]="rolId">
+            <option *ngFor="let rol of RolList" [value]="rol.id">{{rol.descripcion}}</option>
+        </select>
+    </div>
 
 
 

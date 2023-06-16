@@ -15,6 +15,8 @@ export class PostEntradaProductosComponent {
   }
   descripcion: any;
   codigo_sat: any;
+  tipo: any;
+
 
   prueba() {
     console.log("Añadiste algo!!");
@@ -22,7 +24,8 @@ export class PostEntradaProductosComponent {
 
     var data: dataEntradaProductos = {
       descripcion: this.descripcion,
-      codigo_sat: this.codigo_sat
+      codigo_sat: this.codigo_sat,
+      tipo: this.tipo
     };
     // console.log(JSON.stringify(data));
     // console.log(data);
@@ -48,5 +51,6 @@ export class PostEntradaProductosComponent {
 type dataEntradaProductos = {
   descripcion: string;
   codigo_sat: number;
+  tipo: string;
 
 };

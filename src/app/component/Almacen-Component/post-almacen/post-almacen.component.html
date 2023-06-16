@@ -15,13 +15,29 @@
     <input type="number" [(ngModel)]="importe">
 
     <h3>Recibio</h3>
-    <input type="number" [(ngModel)]="recibio">
+    <div class="dataTables_length">
+        <select [(ngModel)]="recibioId">
+            <option *ngFor="let empleado of empleadoList" [value]="empleado.id">{{empleado.nombre}}</option>
+        </select>
+    </div>
 
-    <h3>Clave de producto</h3>
-    <input type="number" [(ngModel)]="clave_producto">
+    <h3>Producto</h3>
+    <div class="dataTables_length">
+        <select [(ngModel)]="clave_producto">
+            <option *ngFor="let producto of productoList" [value]="producto.id">{{producto.descripcion}}</option>
+        </select>
+    </div>
 
     <h3>Contribuyente</h3>
-    <input matInput type="text" [(ngModel)]="contribuyente">
+    <div class="dataTables_length">
+        <select [(ngModel)]="contribuyente">
+            <option *ngFor="let contribuyente of contribuyenteList" [value]="contribuyente.id">
+                {{contribuyente.descripcion}}</option>
+        </select>
+    </div>
+
+    <h3>Fecha de entrada</h3>
+    <input matInput type="date" [(ngModel)]="fecha_entrada">
 
 </div>
 <div id="divActions">
