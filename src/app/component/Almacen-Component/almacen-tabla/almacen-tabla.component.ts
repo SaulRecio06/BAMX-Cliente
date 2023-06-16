@@ -20,8 +20,11 @@ export class AlmacenTablaComponent implements OnInit {
   importe: any;
   fecha_entrada: any;
   recibioId: any;
+  recibioIdName: any;
   clave_producto: any;
   contribuyente: any;
+  contribuyenteName: any;
+
   paginaActual = 1;
   itemsPorPagina = 5;
   public getJsonValue: any;
@@ -40,8 +43,11 @@ export class AlmacenTablaComponent implements OnInit {
     this.importe = element['importe'];
     this.fecha_entrada = element['fecha_entrada'];
     this.recibioId = element['recibioId']['id'];
+    this.recibioIdName = element['recibioId']['nombre'];
     this.clave_producto = element['clave_producto']['id'];
     this.contribuyente = element['contribuyente']['id'];
+    this.contribuyenteName = element['contribuyente']['descripcion'];
+
 
     this.dialogRef.open(EditAlmacenComponent, {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
@@ -51,8 +57,11 @@ export class AlmacenTablaComponent implements OnInit {
         importe: this.importe,
         fecha_entrada: this.fecha_entrada,
         recibioId: this.recibioId,
+        recibioIdName: this.recibioIdName,
         clave_producto: this.clave_producto,
-        contribuyente: this.contribuyente
+        contribuyente: this.contribuyente,
+        contribuyenteName: this.contribuyenteName,
+
       }
     })
 

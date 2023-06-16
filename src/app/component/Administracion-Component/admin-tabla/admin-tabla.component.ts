@@ -22,6 +22,8 @@ export class AdminTablaComponent implements OnInit {
   created: any;
   nombre: any;
   rolId: any;
+  rolIdName: any;
+
   paginaActual = 1;
   itemsPorPagina = 5;
 
@@ -42,12 +44,15 @@ export class AdminTablaComponent implements OnInit {
     this.id = element['id'];
     this.nombre = element['nombre'];
     this.rolId = element['rolId']['id'];
+    this.rolIdName = element['rolId']['descripcion'];
+
 
     this.dialogRef.open(EditAdministracionComponent, {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
         id: this.id,
         nombre: this.nombre,
-        rolId: this.rolId
+        rolId: this.rolId,
+        rolIdName: this.rolIdName,
       }
     })
 

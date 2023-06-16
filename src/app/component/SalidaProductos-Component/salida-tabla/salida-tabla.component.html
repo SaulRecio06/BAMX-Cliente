@@ -25,9 +25,9 @@
             <tr>
                 <th>Id</th>
                 <th>Folio de Salida</th>
-                <th>Clave de Producto</th>
+                <th>Producto De Almacen</th>
                 <th>Titulo</th>
-                <th>Peso</th>
+                <th>Peso (Kg)</th>
                 <th>Destinatario</th>
                 <th>Observaciones</th>
                 <th>Concepto</th>
@@ -37,7 +37,7 @@
                 *ngFor="let element of SalidaProductosList.slice((paginaActual-1)*itemsPorPagina, paginaActual*itemsPorPagina)">
                 <td>{{element.id}}</td>
                 <td>{{element.folio_salida}}</td>
-                <td>{{element.clave_producto}}</td>
+                <td>{{element.clave_producto.clave_producto.descripcion}}</td>
                 <td>{{element.titulo}}</td>
                 <td>{{element.peso}}</td>
                 <td>{{element.destinatario}}</td>

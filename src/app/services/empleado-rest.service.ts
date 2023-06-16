@@ -31,4 +31,8 @@ export class EmpleadoRestService {
     return this.http.delete(this.ApiUrl + '/' + id);
   }
 
+  public getRoles() {
+    return this.http.get<any>("http://localhost:3000/rol");
+  }
+
 }

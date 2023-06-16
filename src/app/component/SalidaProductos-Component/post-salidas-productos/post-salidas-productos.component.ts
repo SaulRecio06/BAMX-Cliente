@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { AlmacenRestService } from 'src/app/services/almacen-rest.service';
 import { SalidaProductosRestService } from 'src/app/services/salida-productos-rest.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { SalidaProductosRestService } from 'src/app/services/salida-productos-re
   templateUrl: './post-salidas-productos.component.html',
   styleUrls: ['./post-salidas-productos.component.css']
 })
-export class PostSalidasProductosComponent {
+export class PostSalidasProductosComponent implements OnInit {
 
   constructor(private ref: MatDialogRef<PostSalidasProductosComponent>,
-    private salidaProductosService: SalidaProductosRestService) {
+    private salidaProductosService: SalidaProductosRestService, private almacenService: AlmacenRestService) {
 
+  }
+  ngOnInit(): void {
+    this.getAlmacen();
   }
 
   folio_salida: any;
@@ -21,6 +25,7 @@ export class PostSalidasProductosComponent {
   destinatario: any;
   observaciones: any;
   concepto: any;
+  almacenList: any = [];
 
   prueba() {
     console.log("Añadiste algo!!");
@@ -53,6 +58,15 @@ export class PostSalidasProductosComponent {
     this.salidaProductosService.postSalidaProducto(data).subscribe((res: any) => {
       console.log(res);
     });
+  }
+
+  getAlmacen() {
+    this.almacenService.getAlmacen().subscribe((res: any) => {
+      console.log(res);
+      this.almacenList = res;
+    })
+
+
   }
 
 }

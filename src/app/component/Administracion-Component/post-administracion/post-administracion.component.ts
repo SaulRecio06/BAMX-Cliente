@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { EmpleadoRestService } from 'src/app/services/empleado-rest.service';
 
@@ -7,15 +7,28 @@ import { EmpleadoRestService } from 'src/app/services/empleado-rest.service';
   templateUrl: './post-administracion.component.html',
   styleUrls: ['./post-administracion.component.css']
 })
-export class PostAdministracionComponent {
+export class PostAdministracionComponent implements OnInit {
   constructor(private ref: MatDialogRef<PostAdministracionComponent>, private empleadoService: EmpleadoRestService) {
 
+  }
+  ngOnInit(): void {
+    this.RolGet();
   }
 
   nombre: any;
   rolId: any;
 
 
+  RolList: any = [];
+
+
+
+  public RolGet() {
+    this.empleadoService.getRoles().subscribe((_Response: any) => {
+      this.RolList = _Response;
+      console.log(this.RolList);
+    })
+  }
 
   prueba() {
     console.log("Añadiste algo!!");
@@ -26,9 +39,7 @@ export class PostAdministracionComponent {
       rolId: this.rolId
 
     };
-    // console.log(JSON.stringify(data));
     // console.log(data);
-
     this.AgregarAlmacen(data);
     window.location.reload();
 

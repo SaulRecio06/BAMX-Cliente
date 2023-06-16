@@ -8,7 +8,7 @@
     <h3>Folio Salida</h3>
     <input type="text" [(ngModel)]="folio_salida" readonly>
 
-    <h3>Clave Producto</h3>
+    <h3>Producto</h3>
     <input type="text" [(ngModel)]="clave_producto" readonly>
 
     <h3>Titulo</h3>
@@ -32,8 +32,14 @@
     <h3>Folio Salida</h3>
     <input type="text" [(ngModel)]="Newfolio_salida">
 
-    <h3>Clave Producto</h3>
-    <input type="text" [(ngModel)]="Newclave_producto">
+    <h3>Producto</h3>
+    <div class="dataTables_length">
+        <select [(ngModel)]="Newclave_producto">
+            <option *ngFor="let producto of almacenList" [value]="producto.id">{{producto.clave_producto.descripcion}}
+            </option>
+
+        </select>
+    </div>
 
     <h3>Titulo</h3>
     <input type="text" [(ngModel)]="Newtitulo">

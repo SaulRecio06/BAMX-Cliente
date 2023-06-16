@@ -53,7 +53,7 @@ export class SalidaTablaComponent implements OnInit {
       width: '40%', height: '620px', enterAnimationDuration: '10ms', exitAnimationDuration: '10m', data: {
         id: this.id,
         folio_salida: this.folio_salida,
-        clave_producto: this.clave_producto,
+        clave_producto: this.clave_producto.clave_producto.descripcion,
         titulo: this.titulo,
         peso: this.peso,
         destinatario: this.destinatario,

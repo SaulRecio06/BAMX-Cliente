@@ -1,5 +1,6 @@
-import { Component, Inject, Optional } from '@angular/core';
+import { Component, Inject, OnInit, Optional } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { AlmacenRestService } from 'src/app/services/almacen-rest.service';
 import { SalidaProductosRestService } from 'src/app/services/salida-productos-rest.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { SalidaProductosRestService } from 'src/app/services/salida-productos-re
   templateUrl: './edit-salidas-productos.component.html',
   styleUrls: ['./edit-salidas-productos.component.css']
 })
-export class EditSalidasProductosComponent {
+export class EditSalidasProductosComponent implements OnInit {
   id: any;
   folio_salida: any;
   clave_producto: any;
@@ -25,11 +26,12 @@ export class EditSalidasProductosComponent {
   Newdestinatario: any;
   Newobservaciones: any;
   Newconcepto: any;
+  almacenList: any = [];
 
 
   constructor(public ref: MatDialogRef<EditSalidasProductosComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
-    private SalidaProductosService: SalidaProductosRestService) {
+    private SalidaProductosService: SalidaProductosRestService, private almacenService: AlmacenRestService) {
     this.id = data.id;
     this.folio_salida = data.folio_salida;
     this.clave_producto = data.clave_producto;
@@ -39,6 +41,9 @@ export class EditSalidasProductosComponent {
     this.observaciones = data.observaciones;
     this.concepto = data.concepto;
 
+  }
+  ngOnInit(): void {
+    this.getAlmacen();
   }
 
   prueba() {
@@ -62,6 +67,16 @@ export class EditSalidasProductosComponent {
 
   closePopUp() {
     this.ref.close()
+  }
+
+
+  getAlmacen() {
+    this.almacenService.getAlmacen().subscribe((res: any) => {
+      console.log(res);
+      this.almacenList = res;
+    })
+
+
   }
 }
 type dataSalidaProductos = {
